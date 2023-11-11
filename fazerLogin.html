@@ -7,23 +7,44 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
+
     <div class="background"></div>
     <div class="content">
         <main id="container">
             <section>
-                <form id="frml" action="menupr.html" method="get">
+                <form id="frml">
                     <label for="nome" class="form-label"><b>Nome de usuário:</b></label>
                     <input type="text" id="nome" name="nome" class="rounded-input" placeholder="Digite seu username"><br><br>
 
                     <label for="senha" class="form-label"><b>Senha:</b></label>
                     <input type="password" id="senha" name="senha" placeholder="Digite a sua senha" class="rounded-input"><br><br>
 
-                    <input type="submit" value="Fazer Login" class="btn-limpar" href="menupr.html">
+                    <input type="submit" onclick="logar(); return false" class="btn-limpar">
                     <p><b>Não possui conta?</b></p>
                     <a href="cadastros.html"> Clique aqui para realizar seu Cadastro</a>
                 </form>
             </section>
         </main>
     </div>
+    <script>
+
+        function logar(){
+
+            var login = document.getElementByid('nome').value;
+            var senha = document.getElementById('senha').value;
+
+           
+                if(login == "admin" && senha == "admin"){
+                    alert('bem vindo admin');
+                    location.href = "relatorios.html";
+                }else{
+                    alert('usuario ou senha incorretos');
+                }
+            
+
+        }
+
+
+    </script>
 </body>
 </html>
