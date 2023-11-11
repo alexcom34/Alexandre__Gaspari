@@ -29,21 +29,22 @@
     <script>
 
         function logar(){
-
-            var login = document.getElementByid('nome').value;
+        
+            var login = document.getElementById('nome').value;
             var senha = document.getElementById('senha').value;
 
-           
+        
                 if(login == "admin" && senha == "admin"){
                     alert('bem vindo admin');
                     location.href = "relatorios.html";
+                
                 }else{
-                    alert('usuario ou senha incorretos');
+                    alert('usuario e senha incorretos');
                 }
             
 
         }
-
+        
 
     </script>
 </body>
