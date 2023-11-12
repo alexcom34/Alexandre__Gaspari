@@ -32,16 +32,25 @@
         
             var login = document.getElementById('nome').value;
             var senha = document.getElementById('senha').value;
+            var tentativas = 1;
 
-        
+            do {
                 if(login == "admin" && senha == "admin"){
                     alert('bem vindo admin');
                     location.href = "relatorios.html";
+                    break;
                 
                 }else{
                     alert('usuario e senha incorretos');
+                    --tentativas;
+                    break;
                 }
-            
+
+            } while(true) 
+
+            if(tentativas === 0){
+                alert('limite de tentativas exercido');
+            }
 
         }
         
